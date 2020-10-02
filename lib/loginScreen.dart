@@ -10,6 +10,7 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
     return Material(
       child: SafeArea(
 
@@ -53,7 +54,7 @@ width: 200,
 
 //                    suffixIcon: Icon(Icons.person,color: Colors.blueAccent,),
                 ),
-                style: TextStyle(fontSize: 12),
+                style: TextStyle(fontSize: width*0.04),
               ),
             ),
           ),
@@ -71,7 +72,7 @@ width: 200,
                   focusedBorder:outlineInputBorder() ,
                   prefixIcon: Icon(Icons.remove_red_eye,color: Colors.blueAccent,size: 20,),
                 ),
-                style: TextStyle(fontSize: 12),
+                style: TextStyle(fontSize: width*0.04),
               ),
             ),),
 
@@ -79,12 +80,12 @@ width: 200,
         GestureDetector(
 
           child:     Text("نسيت كلمة المرور ؟",
-          style: TextStyle(fontSize: 12,color: Colors.orange),
+          style: TextStyle(fontSize: width*0.04,color: Colors.orange),
         ),),
           GestureDetector(
 
             child: Text("لا يوجد حساب؟ انشئ واحد الآن  ",
-              style: TextStyle(fontSize: 12,color: Colors.blueGrey),
+              style: TextStyle(fontSize: width*0.04,color: Colors.blueGrey),
             ),
             onTap: (){
             
@@ -105,7 +106,7 @@ width: 200,
               shape: loginOutlineInputBorder(),
 
               child: Text("تسجيل الدخول "
-                ,style: TextStyle(fontSize: 15,color: Colors.white),
+                ,style: TextStyle(fontSize: width*0.04,color: Colors.white),
                 textAlign: TextAlign.center,
 
               ),
