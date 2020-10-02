@@ -9,6 +9,9 @@ class RegisterScreen extends StatefulWidget {
 class _RegisterScreenState extends State<RegisterScreen> {
   @override
   Widget build(BuildContext context) {
+
+    double width = MediaQuery.of(context).size.width;
+
     return Material(
       child: SafeArea(
 
@@ -52,13 +55,12 @@ class _RegisterScreenState extends State<RegisterScreen> {
 
 //                    suffixIcon: Icon(Icons.person,color: Colors.blueAccent,),
                   ),
-                  style: TextStyle(fontSize: 12),
+                  style: TextStyle(fontSize: width*0.04),
                 ),
               ),
             ),
-            Container(
+            Container(height: 65,              width:  MediaQuery.of(context).size.width*1,
 
-              height:  65,
               child:
               Padding(
                 padding: EdgeInsets.fromLTRB(30,10,30,10),
@@ -67,17 +69,19 @@ class _RegisterScreenState extends State<RegisterScreen> {
 
                 TextField(
 
+
                   textAlign: TextAlign.right,
                   textDirection: TextDirection.ltr,
 
                   decoration: InputDecoration(
-                    hintText: 'البريد الإلكتروني',contentPadding: const EdgeInsets.fromLTRB(20,5.0,20,0),
+                    hintText: 'البريد الإلكتروني',
+                    contentPadding: const EdgeInsets.fromLTRB(20,5.0,20,0),
                     enabledBorder: outlineInputBorder(),
                     focusedBorder:outlineInputBorder() ,
 
 //                    suffixIcon: Icon(Icons.person,color: Colors.blueAccent,),
                   ),
-                  style: TextStyle(fontSize: 12),
+                  style: TextStyle(fontSize: width*0.04),
                 ),
               ),
             ),    Container(
@@ -94,7 +98,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     focusedBorder:outlineInputBorder() ,
                     prefixIcon: Icon(Icons.remove_red_eye,color: Colors.blueAccent,size: 20,),
                   ),
-                  style: TextStyle(fontSize: 12),
+                  style: TextStyle(fontSize: width*0.04),
                 ),
               ),
 
@@ -108,20 +112,21 @@ class _RegisterScreenState extends State<RegisterScreen> {
 
                 child:
 
-                TextField(
+              TextField(
 
-                  textAlign: TextAlign.right,
-                  textDirection: TextDirection.ltr,
+  textAlign: TextAlign.right,
+  textDirection: TextDirection.ltr,
 
-                  decoration: InputDecoration(
-                    hintText: 'تأكيد كلمة المرور',contentPadding: const EdgeInsets.fromLTRB(10,15,10,0),
-                    enabledBorder: outlineInputBorder(),
-                    focusedBorder:outlineInputBorder() ,
+  decoration: InputDecoration(
+    hintText: 'تأكيد كلمة المرور',contentPadding: const EdgeInsets.fromLTRB(10,15,10,0),
+    enabledBorder: outlineInputBorder(),
+    focusedBorder:outlineInputBorder() ,
 
-                    prefixIcon: Icon(Icons.remove_red_eye,color: Colors.blueAccent,size: 20,),
-                  ),
-                  style: TextStyle(fontSize: 12),
-                ),
+    prefixIcon: Icon(Icons.remove_red_eye,color: Colors.blueAccent,size: 20,),
+  ),
+  style: TextStyle(fontSize: width*0.04),
+),
+
               ),
             ),
             Container(
@@ -133,13 +138,13 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   textAlign: TextAlign.right,
                   obscureText: true,
                   decoration: InputDecoration(
-                 hintText: 'رقم الهاتف  ',contentPadding: const EdgeInsets.fromLTRB(10,15,10,0),focusColor: Colors.orange,
+                 hintText: 'رقم الهاتف  ',contentPadding: const EdgeInsets.fromLTRB(20,5.0,20,0),focusColor: Colors.orange,
                     enabledBorder: outlineInputBorder(),
                     focusedBorder:outlineInputBorder() ,
 
 //                    prefixIcon: Icon(Icons.remove_red_eye,color: Colors.blueAccent,size: 20,),
                   ),
-                  style: TextStyle(fontSize: 12),
+                  style: TextStyle(fontSize: width*0.04),
                 ),
               ),
 
